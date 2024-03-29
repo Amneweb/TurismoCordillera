@@ -1,0 +1,52 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16px;
+}
+p, li {
+    font-size:1rem;
+}
+h1 {
+    font-weight:800;
+    font-size:6rem;
+}
+h2, h3, h4, h5 {
+    font-weight:300;
+}
+h2 {
+    font-size:4rem;
+}
+.apartados {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 720px;
+}
+.apartados__item {
+    border:#000000 solid 1px;
+    max-width:480px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+}
+.apartados__item-turismo {
+    grid-column: 1 / span 3;
+    border:#000000 solid 1px;
+}
+.apartados__titulo {
+    grid-column: 1 / span 3;
+    background-color:bisque;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+}
+.container {
+    max-width:1440px;
+    width:100%;
+}
