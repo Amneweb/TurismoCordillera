@@ -7,9 +7,11 @@
     font-weight: 400;
     font-style: normal;
     font-size:16px;
+    scroll-behavior: smooth;
 }
 p, li {
     font-size:1rem;
+    line-height:1.5rem;
 }
 h1 {
     font-weight:800;
@@ -21,18 +23,19 @@ h2, h3, h4, h5 {
 h2 {
     font-size:4rem;
 }
+h3 {
+    font-size:2rem;
+}
 .apartados {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px 720px;
 }
 .apartados__item {
-    border:#000000 solid 1px;
+  
     max-width:480px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding:1rem;
+    overflow:hidden;
+position:relative;
 }
 .apartados__item-turismo {
     grid-column: 1 / span 3;
@@ -40,7 +43,7 @@ h2 {
 }
 .apartados__titulo {
     grid-column: 1 / span 3;
-    background-color:bisque;
+    background-color:#d9d9d9;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -50,3 +53,60 @@ h2 {
     max-width:1440px;
     width:100%;
 }
+.item__overlay {
+    position:absolute;
+    top:0;
+    transform:translateY(80%);
+    transition: 0.5s;
+    background-color:red;
+    overflow:hidden;
+    padding:1rem;
+    height:100%;
+}
+
+.apartados__item:hover .item__overlay {
+    transform: translateY(30%);
+}
+
+:nth-child(odd of .apartados__item) {
+    background-color:#c7c7c7;
+}
+:nth-child(even of .apartados__item) {
+    background-color:#cfcfcf;
+}
+.apartados__item h3 {
+    padding-left: 1rem;
+    padding-top:1.5rem;
+    text-transform:uppercase;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav__ul {
+    list-style-type: none;
+  }
+  .nav__ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .nav__a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  .nav__a:hover {
+    color: #c7c7c7;
+  }
+  .nav__a i {
+    margin-right: 20px;
+  }
+  
