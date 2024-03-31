@@ -1,129 +1,185 @@
 * {
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-    font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size:16px;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
-p, li {
-    font-size:1rem;
-    line-height:1.5rem;
+p,
+li {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 h1 {
-    font-weight:800;
-    font-size:6rem;
+  font-weight: 800;
+  font-size: 6rem;
 }
-h2, h3, h4, h5 {
-    font-weight:300;
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
 }
 h2 {
-    font-size:4rem;
+  font-size: 4rem;
 }
 h3 {
-    font-size:2rem;
+  font-size: 2rem;
 }
 .apartados {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 720px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 720px;
 }
 .apartados__item-turismo {
-    border:#000000 solid 1px;
+  border: #000000 solid 1px;
 }
 .apartados__titulo {
-    
-    background-color:#d9d9d9;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 3rem;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
 }
 .apartados__cajas {
-    display:flex;
+  display: flex;
+  overflow: hidden;
 }
 .apartados__item {
-flex:1;
-position:relative;
-
+  flex: 1;
+  position: relative;
 }
-@media screen and (max-width:700px) { 
-   .apartados__cajas {   
-     overflow-x:auto;
-     overflow-y:hidden;
-     scroll-snap-type: x-mandatory;
-
-}
-.apartados__item {
-    flex-basis:100%;
-     flex-shrink:0;
-scroll-snap-align: none center;
-}
+@media screen and (max-width: 700px) {
+  .apartados__cajas {
+    overflow-x: auto;
+    scroll-snap-type: x-mandatory;
+  }
+  .apartados__item {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: none center;
+  }
 }
 .container {
-    max-width:1440px;
-    width:100%;
+  max-width: 1440px;
+  width: 100%;
 }
 .item__overlay {
-    position:absolute;
-    top:0;
-    transform:translateY(80%);
-    transition: 0.5s;
-    background-color:red;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    padding:1rem;
-    height:100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(80%);
+  transition: 0.5s;
+  background-color: red;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  height: 100%;
 }
 
 .apartados__item:hover .item__overlay {
-    transform: translateY(30%);
+  transform: translateY(30%);
 }
 
 :nth-child(odd of .apartados__item) {
-    background-color:#c7c7c7;
+  background-color: #c7c7c7;
 }
 :nth-child(even of .apartados__item) {
-    background-color:#cfcfcf;
+  background-color: #cfcfcf;
 }
 .apartados__item h3 {
-    padding-left: 1rem;
-    padding-top:1.5rem;
-    text-transform:uppercase;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  text-transform: uppercase;
 }
 
-/*menu superior */
+.modal-menu {
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  width: max-content;
+  left: 0;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  padding: 4em;
+  z-index: 99;
+}
+.activa {
+  transform: translateX(0);
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2em;
+  align-items: flex-start;
+  list-style-type: none;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.nav a:hover {
+  color: greenyellow;
+}
+
+.abrir-menu {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  gap: 8px;
+  transition: 0.2s;
+}
+.abrir-menu:hover {
+  gap: 10px;
+}
+
+.abrir-menu > * {
+  border: solid 2px white;
+  height: 2px;
+}
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .nav__ul {
-    list-style-type: none;
-  }
-  .nav__ul li {
-    display: inline-block;
-    padding: 20px;
-    font-size: 20px;
-  }
-  .nav__a {
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    display: block;
-  }
-  .nav__a:hover {
-    color: #c7c7c7;
-  }
-  .nav__a i {
-    margin-right: 20px;
-  }
-  
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.cerrar-menu {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+.cerrar-menu > * {
+  border: solid 2px white;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  left: 25px;
+  transition: 0.2s;
+}
+.cerrar-menu div:first-child {
+  transform: rotate(45deg);
+}
+.cerrar-menu div:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.cerrar-menu:hover div {
+  transform: rotate(90deg);
+}
