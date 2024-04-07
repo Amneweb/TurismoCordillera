@@ -2,12 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "BenchNine", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
   scroll-behavior: smooth;
+  color: white;
 }
 :root {
   --naranja: #dd6928;
@@ -24,14 +25,17 @@ li {
   line-height: 1.5rem;
 }
 h1 {
-  font-weight: 800;
-  font-size: 6rem;
+  font-size: 9rem;
+  font-family: "Birthstone Bounce", cursive;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
 }
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 300;
+  font-weight: 400;
 }
 h2 {
   font-size: 4rem;
@@ -48,7 +52,6 @@ h3 {
   border: #000000 solid 1px;
 }
 .apartados__titulo {
-  background-color: #d9d9d9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,6 +111,21 @@ h3 {
   text-overflow: ellipsis;
   padding: 1rem;
   height: 100%;
+}
+.apartados__titulo-excursiones {
+  background-color: var(--naranja);
+}
+.apartados__titulo-gastronomia {
+  background-color: var(--verde);
+}
+.apartados__titulo-spa {
+  background-color: var(--lila);
+}
+.apartados__titulo-paquetes {
+  background-color: var(--turquesa);
+}
+.apartados__titulo-traslados {
+  background-color: var(--azul);
 }
 
 .apartados__item:hover .item__overlay {
@@ -250,37 +268,63 @@ h3 {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
-.hero__item {
-  width: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-}
-.hero__item-sup {
-  height: 70%;
   background-image: url("../assets/pareja-feliz-hero-photo-vecteezy.jpg");
 }
-.hero__item-inf {
-  background-image: linear-gradient(black, black), url("../assets/potre.jpg");
-  background-blend-mode: saturation;
+.hero__item {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
-.hero__item-inf > * {
+.hero__item-sup {
+  height: 80%;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
+}
+
+.hero__item-inf {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
+  align-items: center;
   opacity: 0.8;
   flex: 1;
-}
-.hero__item-inf div:first-child {
   background-color: var(--naranja);
+  padding-left: 30vw;
+  padding-right: 30vw;
 }
-.hero__item-inf div:nth-child(2) {
-  background-image: radial-gradient(transparent 40%, black),
-    linear-gradient(var(--gradiente-inicial), var(--gradiente-final));
+
+.intro {
+  height: 20vh;
+  display: flex;
+  background-image: linear-gradient(
+      90deg,
+      rgba(103, 126, 183, 1) 10%,
+      rgba(8, 4, 2, 1) 100%
+    ),
+    url("../assets/potre-bw.jpg");
+  background-blend-mode: multiply;
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__item p,
+.intro p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 3rem;
+  text-align: center;
+}
+.intro p a {
+  font-size: inherit;
+  text-decoration: none;
+}
+.intro p a:hover {
+  text-decoration: underline;
 }
