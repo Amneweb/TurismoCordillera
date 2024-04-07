@@ -9,6 +9,15 @@
   font-size: 16px;
   scroll-behavior: smooth;
 }
+:root {
+  --naranja: #dd6928;
+  --verde: #216920;
+  --lila: #806eb2;
+  --turquesa: #40add7;
+  --azul: #30417f;
+  --gradiente-inicial: #677eb7;
+  --gradiente-final: #2e3851;
+}
 p,
 li {
   font-size: 1rem;
@@ -171,6 +180,7 @@ h3 {
 .abrir-menu > * {
   border: solid 2px white;
   height: 2px;
+  border-radius: 2px;
 }
 
 .header {
@@ -192,6 +202,7 @@ h3 {
 }
 .cerrar-menu > * {
   border: solid 2px white;
+  border-radius: 2px;
   height: 50px;
   position: absolute;
   background-color: white;
@@ -234,11 +245,42 @@ h3 {
 .cordillera p {
   font-weight: 700;
 }
-.apartados__carousel {
+.hero {
   width: 100%;
-  height: 720px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.hero__item {
+  width: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
-  background-image: url("../assets/tim-mossholder-IIPFdGhHKBc-unsplash.jpg");
+}
+.hero__item-sup {
+  height: 70%;
+  background-image: url("../assets/pareja-feliz-hero-photo-vecteezy.jpg");
+}
+.hero__item-inf {
+  background-image: linear-gradient(black, black), url("../assets/potre.jpg");
+  background-blend-mode: saturation;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.hero__item-inf > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  opacity: 0.8;
+  flex: 1;
+}
+.hero__item-inf div:first-child {
+  background-color: var(--naranja);
+}
+.hero__item-inf div:nth-child(2) {
+  background-image: radial-gradient(transparent 40%, black),
+    linear-gradient(var(--gradiente-inicial), var(--gradiente-final));
+  background-position: center center;
+  background-size: cover;
 }
