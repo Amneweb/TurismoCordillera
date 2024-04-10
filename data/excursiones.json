@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "Alta y Termas",
-    "categorias": ["familia", "spa", "bus", "comidas"],
+    "categorias": ["family", "spa", "bus", "food"],
     "horario": "Salida: 7:30 - Regreso: 18:00",
     "duracion": "10 h",
     "disponibilidad": "Lunes, Miércoles, Viernes",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "titulo": "Andes Truck Villavicencio",
-    "categorias": ["familia", "bus", "treking", "fotos"],
+    "categorias": ["family", "bus", "footprints", "pictures"],
     "horario": "Salida: 8:00 - Regreso: 19:00",
     "duracion": "5 h",
     "disponibilidad": "Miércoles, Viernes, Sábado, Domingo",

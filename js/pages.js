@@ -31,8 +31,15 @@ xlink:href="./assets/icons/iconos.svg#icon-${categoria}"></use>` +
       )
       .join("");
     html += `</div>`;
-    html += `<p>${excursion.resumen}</p><div class="card__info"><div><p>Días:</p></div><div><p${excursion.disponibilidad}</p></div>
-</div><div class="card__info"><div><p>Duración</p></div><div><p>${excursion.duracion}</p></div></div><button class="card__button">Más información</button></div></div>`;
+    html += `<p>${excursion.descripcion.substring(
+      0,
+      300
+    )} ...</p><div class="card__info"><div><p>Días:</p></div><div><p${
+      excursion.disponibilidad
+    }</p></div>
+</div><div class="card__info"><div><p>Duración</p></div><div><p>${
+      excursion.duracion
+    }</p></div></div><button class="card__button">Más información</button></div></div>`;
   });
   grilla.innerHTML = html;
 }

@@ -99,3 +99,27 @@
 .card__button {
   background-color: var(--naranja);
 }
+.referencias {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+.referencias__iconos {
+  display: flex;
+  max-width: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.referencias__iconos svg {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+.small {
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+}
+.intro p {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
