@@ -20,7 +20,7 @@ li {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: black;
+  color: #555555;
 }
 p,
 li {
@@ -84,7 +84,7 @@ h3 {
   text-transform: uppercase;
 }
 .nav a:hover {
-  color: black;
+  color: #555555;
 }
 .small {
   font-size: 0.8rem;
@@ -92,7 +92,7 @@ h3 {
 .abrir-menu {
   position: fixed;
   top: 5px;
-  left: 10px;
+  left: calc((vw-1440px) / 2 +10px);
   cursor: pointer;
   display: flex;
   flex-direction: column;
