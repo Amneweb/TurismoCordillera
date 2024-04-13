@@ -14,19 +14,37 @@ for (let i = 0; i < menuOptions.length; i++) {
     menu.classList.remove("activa");
   });
 }
-const vermas = document.querySelectorAll(".vermas");
-console.log(vermas);
-vermas.forEach((enlace) => {
+const vermas_derecha = document.querySelectorAll(".vermas__derecha");
+console.log(vermas_derecha);
+vermas_derecha.forEach((enlace) => {
   enlace.addEventListener("click", (e) => {
-    const parentApartado = enlace.closest(".apartados__item");
-    parentApartado.style.width = "30%";
     const specificLayer = document.querySelector(`.${e.target.id}`);
-    specificLayer.style.transform = "translateX(30%)";
-
+    specificLayer.style.transform = "translateX(0)";
+    const parentCajas = enlace.closest(".apartados__cajas");
+    parentCajas.children[0].style.width = "30%";
+    parentCajas.children[1].style.width = "70%";
     const cerrarExtras = specificLayer.children[0];
     cerrarExtras.addEventListener("click", () => {
       specificLayer.style.transform = "translateX(100%)";
-      parentApartado.style.width = "50%";
+      parentCajas.children[0].style.width = "50%";
+      parentCajas.children[1].style.width = "50%";
+    });
+  });
+});
+const vermas_izquierda = document.querySelectorAll(".vermas__izquierda");
+
+vermas_izquierda.forEach((enlace) => {
+  enlace.addEventListener("click", (e) => {
+    const specificLayer = document.querySelector(`.${e.target.id}`);
+    specificLayer.style.transform = "translateX(0)";
+    const parentCajas = enlace.closest(".apartados__cajas");
+    parentCajas.children[0].style.width = "70%";
+    parentCajas.children[1].style.width = "30%";
+    const cerrarExtras = specificLayer.children[0];
+    cerrarExtras.addEventListener("click", () => {
+      specificLayer.style.transform = "translateX(-100%)";
+      parentCajas.children[0].style.width = "50%";
+      parentCajas.children[1].style.width = "50%";
     });
   });
 });

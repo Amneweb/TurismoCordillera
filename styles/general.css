@@ -2,10 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "BenchNine", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   scroll-behavior: smooth;
   color: white;
@@ -18,6 +14,13 @@
   --azul: #30417f;
   --gradiente-inicial: #677eb7;
   --gradiente-final: #2e3851;
+}
+p,
+li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
 }
 p,
 li {
@@ -36,6 +39,9 @@ h3,
 h4,
 h5 {
   font-weight: 400;
+  font-family: "BenchNine", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 h2 {
   font-size: 4rem;
