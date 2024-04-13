@@ -86,7 +86,9 @@ h3 {
 .nav a:hover {
   color: black;
 }
-
+.small {
+  font-size: 0.8rem;
+}
 .abrir-menu {
   position: fixed;
   top: 5px;
