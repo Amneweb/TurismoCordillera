@@ -183,7 +183,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  background-image: url("../assets/pareja-feliz-hero-photo-vecteezy.jpg");
+  background-image: url("../assets/cabalgata-hero.jpg");
 }
 .hero__item {
   width: 100%;
@@ -305,7 +305,7 @@
   background-color: var(--naranja);
 }
 #gastronomia button.vermas {
-  color: var(--azul);
+  color: var(--verde);
 }
 .vermas__p--derecha {
   align-self: end;
