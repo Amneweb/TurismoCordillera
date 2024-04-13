@@ -183,7 +183,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  background-image: url("../assets/cabalgata-hero.jpg");
+  background-image: url("../assets/cabalgata-hero-flip.jpg");
 }
 .hero__item {
   width: 100%;
