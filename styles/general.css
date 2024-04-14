@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
   color: white;
 }
+body,
+html {
+  background-color: #444444;
+}
 :root {
   --naranja: #dd6928;
   --verde: #216920;
