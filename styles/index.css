@@ -106,14 +106,13 @@
 
 .item__overlay {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(100%);
   transition: 0.5s;
   background-color: white;
   overflow: hidden;
-  text-overflow: ellipsis;
   padding: 3rem;
-  height: 60%;
+  height: 50%;
   display: flex;
   gap: 3rem;
   flex-direction: column;
@@ -268,7 +267,7 @@ top: 30px;
   height: 6rem;
   overflow: hidden;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,6 +312,17 @@ top: 30px;
 #gastronomia button.vermas {
   color: var(--verde);
 }
+#gastronomia button.vermas:hover {
+  color: white;
+  background-color: var(--verde);
+}
+#spa button.vermas {
+  color: var(--lila);
+}
+#spa button.vermas:hover {
+  color: white;
+  background-color: var(--lila);
+}
 .vermas__p--derecha {
   align-self: end;
 }
@@ -347,7 +357,10 @@ top: 30px;
   border-color: var(--lila);
   background-color: var(--lila);
 }
-
+#gastronomia .cerrar-extras > * {
+  border-color: var(--verde);
+  background-color: var(--verde);
+}
 .cerrar-extras div:first-child {
   transform: rotate(45deg);
 }
@@ -377,17 +390,28 @@ top: 30px;
 #excursiones .apartados__extra li::before {
   color: var(--naranja);
 }
+#gastronomia .apartados__extra li::before {
+  color: var(--verde);
+}
+#spa .apartados__extra li::before {
+  color: var(--lila);
+}
 .apartados__extra--contenido {
   padding: 1rem 3rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 1rem;
   overflow-y: auto;
+  flex: 1;
 }
+
 .fichas {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
 }
 
 .notas {
@@ -400,6 +424,8 @@ top: 30px;
 
 .notas:nth-child(2) {
   background-color: green;
+}
+.notas:nth-child(2) a {
   color: white;
 }
 .notas:first-child {

@@ -57,7 +57,7 @@ h3 {
 .modal-menu {
   top: 0;
   bottom: 0;
-  background-color: #776db1;
+  background-color: #555555;
   color: white;
   width: max-content;
   left: 0;
@@ -84,7 +84,7 @@ h3 {
   text-transform: uppercase;
 }
 .nav a:hover {
-  color: #555555;
+  color: var(--naranja);
 }
 .small {
   font-size: 0.8rem;
@@ -137,7 +137,7 @@ h3 {
 .cerrar-menu > * {
   border: solid 2px white;
   border-radius: 2px;
-  height: 50px;
+  height: 40px;
   position: absolute;
   background-color: white;
   left: 25px;
