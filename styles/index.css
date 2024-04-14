@@ -9,6 +9,7 @@
 }
 .apartados__item.cajas__info {
   padding: 3rem;
+  background-color: white;
 }
 .cajas__info p,
 .cajas__info li,
