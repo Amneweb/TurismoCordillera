@@ -3,21 +3,20 @@
   grid-template-columns: 1fr;
   grid-template-rows: 200px 720px;
 }
-.apartados__item-turismo {
-  border: #000000 solid 1px;
-}
+
 .apartados__item.paquetes {
   width: 30%;
 }
-.apartados__item.paquetes__info {
+.apartados__item.cajas__info {
   padding: 3rem;
 }
-#paquetes p,
-#paquetes li,
-#paquetes li a {
+.cajas__info p,
+.cajas__info li,
+.cajas__info h3,
+.cajas__info li a {
   color: #555555;
 }
-.paquetes__info {
+.cajas__info {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -26,18 +25,18 @@
   order: 0;
   max-height: 100%;
 }
-.paquetes__info li {
+.cajas__info li {
   list-style-type: none;
   line-height: 2rem;
 }
-.paquetes__info a {
+.cajas__info a {
   text-decoration: none;
 }
-.paquetes__info a:hover {
+.cajas__info a:hover {
   text-decoration: underline;
 }
 
-.paquetes__info li::before {
+.cajas__info li::before {
   content: "\2B95";
   margin-right: 2rem;
   font-size: 1.1rem;
@@ -93,7 +92,7 @@
 .cultura {
   background-image: url("../assets/inca.jpg");
 }
-.buses {
+.transporte {
   background-image: url("../assets/bus-ciudad-mendoza-4.jpg");
 }
 .bodegas {
@@ -492,4 +491,35 @@ svg.folder {
   width: 1rem;
   margin-right: 1rem;
   opacity: 0.8;
+}
+.galeria {
+  display: flex;
+  gap: 1rem;
+}
+.galeria > * {
+  flex: 1;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 9rem;
+}
+figure.bari {
+  background-image: url("../assets/bariloche.jpg");
+}
+figure.carlospaz {
+  background-image: url("../assets/carlospaz.jpg");
+}
+figure.sanluis {
+  background-image: url("../assets/san-luis-2.jpg");
+}
+figure.termasRH {
+  background-image: url("../assets/termasRH.jpg");
+}
+.galeria figcaption {
+  font-family: "BenchNine", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 4.5rem;
+  line-height: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
 }
