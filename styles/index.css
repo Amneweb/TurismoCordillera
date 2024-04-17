@@ -69,13 +69,22 @@
   top: 0;
   left: 0;
   height: 100%;
-  transition: 0.3s;
+  transition: 1s;
   z-index: 100;
   background-color: white;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   align-items: start;
+}
+/*=====probando========
+
+======================*/
+.desplegados__ancho {
+  width: 70%;
+}
+.desplegados__angosto {
+  width: 30%;
 }
 
 .extra__izquierda {
@@ -114,29 +123,7 @@
 .paquetes {
   background-image: url("../assets/turista-valijas.jpg");
 }
-@media screen and (max-width: 700px) {
-  .apartados__cajas {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  .apartados__item {
-    flex-basis: 100%;
-    flex-shrink: 0;
-    scroll-snap-align: none center;
-  }
-  .logo {
-    flex-direction: column;
-  }
-  .logo__img {
-    order: -1;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-}
+
 .angosto {
   width: 30%;
 }
@@ -691,4 +678,48 @@ label {
 }
 iframe {
   border: 0;
+}
+@media screen and (max-width: 700px) {
+  .apartados__cajas {
+    /*overflow-x: auto;
+    scroll-snap-type: x mandatory;*/
+    flex-wrap: wrap;
+  }
+  .apartados__item {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: none center;
+  }
+  .logo {
+    flex-direction: column;
+  }
+  .logo__img {
+    order: -1;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .apartados__extra {
+    width: 100%;
+  }
+
+  .extra__derecha {
+    left: 0%;
+  }
+  .desplegados__ancho {
+    width: 100%;
+  }
+  .desplegados__angosto {
+    width: 100%;
+  }
+  /*.toggleMobile {
+    display: none;
+  }*/
+
+  .apartados {
+    grid-template-rows: 200px 1440px;
+  }
 }

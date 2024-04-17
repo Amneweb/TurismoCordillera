@@ -19,15 +19,21 @@ console.log(vermas_derecha);
 vermas_derecha.forEach((enlace) => {
   enlace.addEventListener("click", (e) => {
     const specificLayer = document.querySelector(`.${e.target.id}`);
+    /*specificLayer.classList.remove("toggleMobile");*/
     specificLayer.style.transform = "translateX(0)";
     const parentCajas = enlace.closest(".apartados__cajas");
+    /*
     parentCajas.children[0].style.width = "30%";
-    parentCajas.children[1].style.width = "70%";
+    parentCajas.children[1].style.width = "70%";*/
+    parentCajas.children[0].classList.add("desplegados__ancho");
+    parentCajas.children[1].classList.add("desplegados__angosto");
+
     const parentOverlay = enlace.closest(".apartados__item");
     parentOverlay.classList.remove("apartados__overlay");
     const cerrarExtras = specificLayer.children[0];
     cerrarExtras.addEventListener("click", () => {
       specificLayer.style.transform = "translateX(100%)";
+      /*specificLayer.classList.add("toggleMobile");*/
       parentCajas.children[0].style.width = "50%";
       parentCajas.children[1].style.width = "50%";
       parentOverlay.classList.add("apartados__overlay");
@@ -41,8 +47,10 @@ vermas_izquierda.forEach((enlace) => {
     const specificLayer = document.querySelector(`.${e.target.id}`);
     specificLayer.style.transform = "translateX(0)";
     const parentCajas = enlace.closest(".apartados__cajas");
-    parentCajas.children[0].style.width = "70%";
-    parentCajas.children[1].style.width = "30%";
+    /*parentCajas.children[0].style.width = "70%";
+    parentCajas.children[1].style.width = "30%";*/
+    parentCajas.children[0].classList.add("desplegados__ancho");
+    parentCajas.children[1].classList.add("desplegados__angosto");
     const parentOverlay = enlace.closest(".apartados__item");
     parentOverlay.classList.remove("apartados__overlay");
     const cerrarExtras = specificLayer.children[0];
@@ -54,3 +62,11 @@ vermas_izquierda.forEach((enlace) => {
     });
   });
 });
+
+/* const mediaQuery = window.matchMedia("(max-width: 700px)");
+function handleSizes(e, element) {
+  if (e.matches) {
+    element.style.width = "100%";
+  }
+}
+mediaQuery.addEventListener("change", handleSizes);*/
