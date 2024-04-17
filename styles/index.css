@@ -680,6 +680,17 @@ iframe {
   border: 0;
 }
 @media screen and (max-width: 700px) {
+  .hero::before {
+    width: 75px;
+    height: 134px;
+    right: 20px;
+    top: 20px;
+    bottom: auto;
+    left: auto;
+  }
+  .hero__item-sup {
+    padding-bottom: 1.2rem;
+  }
   .apartados__cajas {
     /*overflow-x: auto;
     scroll-snap-type: x mandatory;*/
@@ -690,11 +701,13 @@ iframe {
     flex-shrink: 0;
     scroll-snap-align: none center;
   }
-  .logo {
-    flex-direction: column;
+  .hero__item p,
+  .intro p {
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
-  .logo__img {
-    order: -1;
+  h1 {
+    font-size: 5rem;
   }
   h2 {
     font-size: 3rem;
