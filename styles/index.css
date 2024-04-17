@@ -722,4 +722,7 @@ iframe {
   .apartados {
     grid-template-rows: 200px 1440px;
   }
+  footer {
+    grid-template-columns: 1fr;
+  }
 }

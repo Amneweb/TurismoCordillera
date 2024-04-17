@@ -25,8 +25,8 @@ vermas_derecha.forEach((enlace) => {
     /*
     parentCajas.children[0].style.width = "30%";
     parentCajas.children[1].style.width = "70%";*/
-    parentCajas.children[0].classList.add("desplegados__ancho");
-    parentCajas.children[1].classList.add("desplegados__angosto");
+    parentCajas.children[0].classList.add("desplegados__angosto");
+    parentCajas.children[1].classList.add("desplegados__ancho");
 
     const parentOverlay = enlace.closest(".apartados__item");
     parentOverlay.classList.remove("apartados__overlay");
@@ -34,6 +34,8 @@ vermas_derecha.forEach((enlace) => {
     cerrarExtras.addEventListener("click", () => {
       specificLayer.style.transform = "translateX(100%)";
       /*specificLayer.classList.add("toggleMobile");*/
+      parentCajas.children[0].classList.remove("desplegados__angosto");
+      parentCajas.children[1].classList.remove("desplegados__ancho");
       parentCajas.children[0].style.width = "50%";
       parentCajas.children[1].style.width = "50%";
       parentOverlay.classList.add("apartados__overlay");
@@ -56,6 +58,8 @@ vermas_izquierda.forEach((enlace) => {
     const cerrarExtras = specificLayer.children[0];
     cerrarExtras.addEventListener("click", () => {
       specificLayer.style.transform = "translateX(-100%)";
+      parentCajas.children[0].classList.remove("desplegados__ancho");
+      parentCajas.children[1].classList.remove("desplegados__angosto");
       parentCajas.children[0].style.width = "50%";
       parentCajas.children[1].style.width = "50%";
       parentOverlay.classList.add("apartados__overlay");
