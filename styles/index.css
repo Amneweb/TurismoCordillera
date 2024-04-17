@@ -735,6 +735,18 @@ iframe {
   .apartados {
     grid-template-rows: 200px 1440px;
   }
+  .apartados__extra {
+    height: 720px;
+  }
+  .extra__izquierda {
+    top: 720px;
+  }
+  .galeria {
+    flex-wrap: wrap;
+  }
+  .galeria > * {
+    min-width: 40%;
+  }
   footer {
     grid-template-columns: 1fr;
   }
