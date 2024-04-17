@@ -681,12 +681,12 @@ iframe {
 }
 @media screen and (max-width: 700px) {
   .hero::before {
-    width: 75px;
-    height: 134px;
-    right: 20px;
+    width: 100px;
+    height: 179px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 20px;
     bottom: auto;
-    left: auto;
   }
   .hero__item-sup {
     padding-bottom: 1.2rem;
