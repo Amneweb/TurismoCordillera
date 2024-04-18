@@ -528,7 +528,7 @@ footer {
 }
 footer h2 {
   font-size: 4.375rem;
-  width: 31.25rem;
+  width: 100%;
   text-align: center;
 }
 .form__contacto {
