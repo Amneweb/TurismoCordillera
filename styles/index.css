@@ -17,6 +17,9 @@
 .cajas__info a {
   color: #555555;
 }
+.apartados#traslados .cajas__info {
+  background-color: #f5f5f5;
+}
 .cajas__info {
   display: flex;
   flex-direction: column;
@@ -529,7 +532,7 @@ footer h2 {
   text-align: center;
 }
 .form__contacto {
-  background-color: #30417f;
+  background-color: var(--azul);
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
@@ -540,10 +543,13 @@ footer h2 {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .container__mail input,
 .container__nombre input {
-  width: 31.25rem;
+  width: 100%;
   height: 3.125rem;
   background-color: transparent;
   border: none;
@@ -611,6 +617,7 @@ footer h2 {
 .div__input div {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form__contacto div input::placeholder {
@@ -640,7 +647,7 @@ label {
   font-size: 14px;
 }
 .form__contacto button {
-  background-color: #dd6928;
+  background-color: var(--naranja);
   width: 120px;
   height: 40px;
   border: none;
@@ -654,30 +661,43 @@ label {
   justify-content: center;
   gap: 1.875rem;
   padding: 0 50px;
-  color: #141414;
+  color: #555555;
 }
 
 .ul__contacto {
   list-style: none;
 }
+.ul__contacto li {
+  line-height: 2rem;
+}
 .ul__contacto li a {
-  color: #141414;
+  color: #555555;
   text-decoration: none;
 }
-.ul__contacto li a img {
+.ul__contacto li a svg {
+  width: 1rem;
+  height: 1rem;
   margin-right: 0.625rem;
+  fill: var(--azul);
 }
 
 .iconos__redes {
   display: flex;
   gap: 0.9375rem;
+  align-items: center;
 }
-.iconos__redes img {
-  width: 45px;
-  height: 45px;
+.iconos__redes a {
+  color: #555555;
+  text-decoration: none;
+}
+.iconos__redes svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--azul);
 }
 iframe {
   border: 0;
+  max-width: 100%;
 }
 @media screen and (max-width: 700px) {
   .hero::before {
@@ -703,8 +723,8 @@ iframe {
   }
   .hero__item p,
   .intro p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
   h1 {
     font-size: 5rem;
@@ -728,10 +748,6 @@ iframe {
   .desplegados__angosto {
     width: 100%;
   }
-  /*.toggleMobile {
-    display: none;
-  }*/
-
   .apartados {
     grid-template-rows: 200px 1440px;
   }
@@ -749,5 +765,6 @@ iframe {
   }
   footer {
     grid-template-columns: 1fr;
+    row-gap: 3rem;
   }
 }
