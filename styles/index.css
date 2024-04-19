@@ -551,6 +551,7 @@ footer h2 {
   background-color: transparent;
   border: none;
   border-bottom: 0.0625rem solid white;
+  border-radius: 0;
   outline: none;
   cursor: pointer;
 }
@@ -560,6 +561,7 @@ footer h2 {
   border: none;
   border-bottom: 0.0625rem solid white;
   outline: none;
+  border-radius: 0;
   cursor: pointer;
   height: 150px;
 }
@@ -642,6 +644,7 @@ footer h2 {
 label {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  margin-left: 1rem;
 }
 .form__contacto button {
   background-color: var(--naranja);
@@ -696,6 +699,9 @@ iframe {
   border: 0;
   max-width: 100%;
 }
+iframe a {
+  border: 0;
+}
 @media screen and (max-width: 700px) {
   .hero::before {
     width: 100px;
@@ -734,6 +740,8 @@ iframe {
   }
   .apartados__extra {
     width: 100%;
+    height: 720px;
+    gap: 0;
   }
 
   .extra__derecha {
@@ -748,9 +756,6 @@ iframe {
   .apartados {
     grid-template-rows: 200px 1440px;
   }
-  .apartados__extra {
-    height: 720px;
-  }
   .extra__izquierda {
     top: 720px;
   }
@@ -764,5 +769,13 @@ iframe {
     grid-template-columns: 1fr;
     row-gap: 3rem;
     max-width: 100%;
+  }
+  .item__overlay {
+    gap: 2rem;
+  }
+  .apartados__extra--contenido {
+    padding: 1rem 1rem;
+
+    gap: 0.5rem;
   }
 }
