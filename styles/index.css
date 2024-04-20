@@ -775,7 +775,9 @@ iframe a {
   }
   .apartados__extra--contenido {
     padding: 1rem 1rem;
-
     gap: 0.5rem;
+  }
+  .overlay__mobile {
+    transform: translateY(0);
   }
 }

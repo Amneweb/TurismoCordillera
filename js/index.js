@@ -8,14 +8,14 @@ cerrarMenu.addEventListener("click", () => {
   menu.classList.remove("activa");
 });
 const menuOptions = document.querySelector(".nav").children;
-console.log(menuOptions);
+
 for (let i = 0; i < menuOptions.length; i++) {
   menuOptions[i].addEventListener("click", () => {
     menu.classList.remove("activa");
   });
 }
 const vermas_derecha = document.querySelectorAll(".vermas__derecha");
-console.log(vermas_derecha);
+
 vermas_derecha.forEach((enlace) => {
   enlace.addEventListener("click", (e) => {
     const specificLayer = document.querySelector(`.${e.target.id}`);
@@ -75,3 +75,36 @@ window.addEventListener("scroll", () => {
 botonSubir.addEventListener("click", () => {
   document.scrollTo(0);
 });
+const hovers = document.querySelectorAll(".apartados__item");
+console.log("hovers ", hovers);
+console.log("posision primer item", hovers[0].scrollTop);
+
+window.addEventListener("scroll", () => {
+  hovers.forEach((seccion) => {
+    console.log("dentro de for each antes de funcion");
+    console.log("adentro de funcion ", seccion.scrollTop);
+    const persiana = seccion.getElementsByClassName("item__overlay")[0];
+    const posicion = seccion.getBoundingClientRect();
+    const isVisible =
+      posicion.top <= 50 &&
+      posicion.bottom <=
+        (window.innerHeight + 50 || document.documentElement.clientHeight + 50);
+    if (isVisible) {
+      persiana.classList.add("overlay__mobile");
+    } else persiana.classList.remove("overlay__mobile");
+  });
+});
+/*const handleScroll = () => {
+  if (elementRef.current) {
+    const rect = elementRef.current.getBoundingClientRect();
+    const isVisible = (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+    setIsVisible(isVisible);
+  }
+};
+
+window.addEventListener('scroll', handleScroll);*/
