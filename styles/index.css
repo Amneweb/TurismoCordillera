@@ -756,6 +756,19 @@ iframe a {
   .apartados {
     grid-template-rows: 200px 1440px;
   }
+  .apartados#paquetes,
+  .apartados#traslados {
+    grid-template-rows: 200px auto;
+  }
+  .apartados__item.paquetes {
+    width: 100%;
+    height: 200px;
+  }
+  .apartados__item.transporte {
+    width: 100%;
+    height: 200px;
+    order: -1;
+  }
   .extra__izquierda {
     top: 720px;
   }
@@ -779,5 +792,18 @@ iframe a {
   }
   .overlay__mobile {
     transform: translateY(0);
+  }
+  .apartados__titulo {
+    padding-left: 0;
+  }
+  .apartados__titulo h2 {
+    text-align: center;
+  }
+  .hero__item-inf {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .cajas__info {
+    height: auto;
   }
 }
