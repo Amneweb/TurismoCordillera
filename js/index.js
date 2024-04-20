@@ -84,27 +84,18 @@ window.addEventListener("scroll", () => {
     console.log("dentro de for each antes de funcion");
     console.log("adentro de funcion ", seccion.scrollTop);
     const persiana = seccion.getElementsByClassName("item__overlay")[0];
+    const titulo = seccion.getElementsByClassName("apartados__h3")[0];
     const posicion = seccion.getBoundingClientRect();
     const isVisible =
-      posicion.top <= 50 &&
-      posicion.bottom <=
-        (window.innerHeight + 50 || document.documentElement.clientHeight + 50);
+      posicion.top <= 30 ||
+      posicion.bottom >=
+        (window.innerHeight - 50 || document.documentElement.clientHeight - 50);
     if (isVisible) {
       persiana.classList.add("overlay__mobile");
-    } else persiana.classList.remove("overlay__mobile");
+      titulo.classList.add("overlay__mobile");
+    } else {
+      persiana.classList.remove("overlay__mobile");
+      titulo.classList.remove("overlay__mobile");
+    }
   });
 });
-/*const handleScroll = () => {
-  if (elementRef.current) {
-    const rect = elementRef.current.getBoundingClientRect();
-    const isVisible = (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-    setIsVisible(isVisible);
-  }
-};
-
-window.addEventListener('scroll', handleScroll);*/
