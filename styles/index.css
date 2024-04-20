@@ -73,7 +73,7 @@
   left: 0;
   height: 100%;
   transition: 1s;
-  z-index: 100;
+  z-index: 96;
   background-color: white;
   display: flex;
   gap: 2rem;
@@ -519,14 +519,16 @@ FOOTER
 ============================*/
 /*FOOTER*/
 
-footer {
+.contacto {
   display: grid;
-  grid-template-columns: 50% 40%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  column-gap: 2rem;
   justify-content: center;
   background-color: white;
-  padding-top: 4.375rem;
+  padding: 4.375rem;
 }
-footer h2 {
+.contacto h2 {
   text-align: center;
 }
 .form__contacto {
@@ -660,7 +662,7 @@ label {
   flex-direction: column;
   justify-content: center;
   gap: 1.875rem;
-  padding: 0 20px;
+
   color: #555555;
 }
 
@@ -698,10 +700,69 @@ label {
 iframe {
   border: 0;
   max-width: 100%;
+  height: 300px;
 }
 iframe a {
   border: 0;
 }
+
+.pagos__medios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+}
+.pagos__medios figure {
+  max-width: 3rem;
+  background-color: white;
+  padding: 0.2rem;
+  border-radius: 2px;
+}
+.pagos__medios figure img {
+  max-width: 100%;
+}
+footer {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 10rem;
+  gap: 2rem;
+  background-color: #444444;
+}
+footer h3 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+footer p {
+  color: white;
+}
+.pagos__como p {
+  line-height: 3rem;
+}
+.derechos {
+  padding: 1rem;
+  text-align: center;
+  background-color: #111111;
+}
+
+.derechos p {
+  color: white;
+  opacity: 0.8;
+}
+.sipagoLogo {
+  width: 5rem;
+  vertical-align: middle;
+}
+.footer__derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.sipago {
+  justify-self: flex-end;
+}
+
 @media screen and (max-width: 700px) {
   .hero::before {
     width: 100px;
@@ -778,10 +839,14 @@ iframe a {
   .galeria > * {
     min-width: 40%;
   }
-  footer {
+  .contacto {
     grid-template-columns: 1fr;
     row-gap: 3rem;
     max-width: 100%;
+    padding: 0;
+  }
+  .datos__contacto {
+    padding: 0 4rem 4rem 4rem;
   }
   .item__overlay {
     gap: 1rem;
