@@ -156,3 +156,25 @@ h3 {
 .cerrar-menu:hover div {
   transform: rotate(90deg);
 }
+#subir {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+  display: block;
+  border-radius: 50%;
+  visibility: visible;
+  text-align: center;
+  transition: 0.5s;
+}
+#subir a svg {
+  max-width: 90%;
+  max-height: 90%;
+  fill: var(--azul);
+}
+#subir.invisible {
+  bottom: -5rem;
+  visibility: hidden;
+}

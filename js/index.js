@@ -66,11 +66,12 @@ vermas_izquierda.forEach((enlace) => {
     });
   });
 });
-
-/* const mediaQuery = window.matchMedia("(max-width: 700px)");
-function handleSizes(e, element) {
-  if (e.matches) {
-    element.style.width = "100%";
-  }
-}
-mediaQuery.addEventListener("change", handleSizes);*/
+const botonSubir = document.querySelector("#subir");
+window.addEventListener("scroll", () => {
+  if (document.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    botonSubir.classList.remove("invisible");
+  } else botonSubir.classList.add("invisible");
+});
+botonSubir.addEventListener("click", () => {
+  document.scrollTo(0);
+});
