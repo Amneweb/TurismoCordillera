@@ -871,4 +871,10 @@ footer p {
   .cajas__info {
     height: auto;
   }
+  footer {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    row-gap: 4rem;
+    background-color: #444444;
+  }
 }
