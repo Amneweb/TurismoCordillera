@@ -781,6 +781,8 @@ footer p {
   background-color: var(--naranja);
   padding: 0.5rem;
   border-radius: 5px;
+}
+.terminos_condiciones a {
   text-decoration: none;
 }
 .terminos_condiciones:hover {
@@ -788,7 +790,6 @@ footer p {
   color: var(--naranja);
   padding: 0.5rem;
   border-radius: 5px;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -899,6 +900,7 @@ footer p {
   .cajas__info {
     height: auto;
   }
+
   footer {
     grid-template-columns: 1fr;
     padding: 3rem;
