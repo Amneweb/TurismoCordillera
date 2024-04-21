@@ -783,7 +783,7 @@ footer p {
   border-radius: 5px;
 }
 .terminos_condiciones a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .terminos_condiciones:hover {
   background-color: white;
