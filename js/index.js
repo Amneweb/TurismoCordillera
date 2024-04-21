@@ -86,7 +86,8 @@ window.addEventListener("scroll", () => {
     const persiana = seccion.getElementsByClassName("item__overlay")[0];
     const titulo = seccion.getElementsByClassName("apartados__h3")[0];
     const posicion = seccion.getBoundingClientRect();
-    const isVisible = posicion.top <= 30 || posicion.bottom >= 80;
+    const isVisible =
+      posicion.top <= 30 && posicion.bottom <= window.innerHeight;
     // (window.innerHeight - 50 || document.documentElement.clientHeight - 50);
     if (isVisible) {
       persiana.classList.add("overlay__mobile");
