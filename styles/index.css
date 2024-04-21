@@ -477,6 +477,11 @@ svg.whatsapp {
 }
 svg.folder {
   fill: #555555;
+  vertical-align: middle;
+}
+svg.warning {
+  fill: var(--naranja);
+  vertical-align: middle;
 }
 .info {
   background-color: #f5f5f5;
