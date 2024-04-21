@@ -106,7 +106,7 @@
   background-image: url("../assets/inca.jpg");
 }
 .transporte {
-  background-image: url("../assets/bus-ciudad-mendoza-4.jpg");
+  background-image: url("../assets/busesLG.jpg");
 }
 .bodegas {
   background-image: url("../assets/copavino.jpg");
@@ -408,7 +408,11 @@ top: 30px;
 .apartados__extra a:hover {
   text-decoration: underline;
 }
-
+.warning {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: var(--naranja);
+}
 .apartados__extra li::before {
   content: "\2B95";
   margin-right: 2rem;
@@ -452,7 +456,8 @@ top: 30px;
 }
 
 .notas:nth-child(2) {
-  background-color: green;
+  background-color: var(--verde);
+  border: solid 1px var(--verde);
 }
 .notas:nth-child(2) a {
   color: white;
@@ -676,6 +681,10 @@ label {
   color: #555555;
   text-decoration: none;
 }
+.ul__contacto li a:hover {
+  color: #181717;
+  font-weight: 500;
+}
 .ul__contacto li a svg {
   width: 1rem;
   height: 1rem;
@@ -761,6 +770,20 @@ footer p {
 }
 .sipago {
   justify-self: flex-end;
+}
+
+.terminos_condiciones {
+  background-color: var(--naranja);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.terminos_condiciones:hover {
+  background-color: white;
+  color: var(--naranja);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
